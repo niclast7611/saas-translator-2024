@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 type Props = {
-  name?: string;
-  image?: string;
+  name?: string | null;
+  image?: string | null;
   className?: string;
 };
 
