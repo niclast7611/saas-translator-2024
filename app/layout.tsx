@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import ClientProvider from "@/components/ClientProvider";
+import ClientProviders from "@/components/ClientProviders";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClientProvider>
+    <ClientProviders>
       <html lang="en">
         <body className="flex flex-col min-h-screen">
           <ThemeProvider
@@ -30,6 +30,6 @@ export default function RootLayout({
           </ThemeProvider>
         </body>
       </html>
-    </ClientProvider>
+    </ClientProviders>
   );
 }
