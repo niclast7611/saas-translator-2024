@@ -25,7 +25,7 @@ const PricingCards = ({ redirect }: Props) => {
     },
     {
       name: "Pro",
-      id: "dwdwdwd",
+      id: "pro",
       href: "#",
       priceMonthly: "$5.00",
       description: "Unlock the Full Potential with Pro!",

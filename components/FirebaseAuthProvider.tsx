@@ -6,9 +6,9 @@ import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 
 const syncFirebaseAuth = async (session: Session) => {
-  if (session && session.firebaseToken) {
+  if (session && session?.firebaseToken) {
     try {
-      await signInWithCustomToken(auth, session.firebaseToken);
+      await signInWithCustomToken(auth, session?.firebaseToken);
     } catch (e) {
       console.error("Failed to sync firebase auth", e);
     }
