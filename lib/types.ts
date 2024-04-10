@@ -1,3 +1,4 @@
+import { DefaultSession } from "next-auth";
 export interface Tier {
     name: string;
     id: string | null;
@@ -5,4 +6,20 @@ export interface Tier {
     priceMonthly: string | null;
     description: string;
     features:string[];
+  }
+  declare module "next-auth" {
+      interface Session {
+          firebaseToken?: string;
+          user:{
+              id: string;
+  
+          }& DefaultSession["user"]
+      }
+  }
+  
+  export interface User  {
+    name: string,
+    email: string,
+    image: string,
+    id: string
   }

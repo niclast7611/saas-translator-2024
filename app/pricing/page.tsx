@@ -1,4 +1,4 @@
-import PricingCard from "@/components/PricingCard";
+import PricingCards from "@/components/PricingCards";
 import React from "react";
 
 type Props = {};
@@ -75,11 +75,7 @@ const PricingPage = (props: Props) => {
       </div>
 
       <div className="flow-root bg-white pb-24 sm:pb-32">
-        <div className="-mt-80 mx-auto grid max-w-md grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
-          {tiers.map((tier) => (
-            <PricingCard key={tier.name} tier={tier} redirect={true} />
-          ))}
-        </div>
+        <PricingCards redirect={true} />
       </div>
     </div>
   );
