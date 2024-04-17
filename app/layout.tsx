@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import ClientProviders from "@/components/ClientProviders";
-import "./globals.css";
 import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Translator App",
@@ -26,8 +25,6 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              <Header />
-
               {children}
             </ThemeProvider>
           </FirebaseAuthProvider>
